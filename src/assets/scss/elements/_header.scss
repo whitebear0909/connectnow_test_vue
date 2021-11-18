@@ -1,0 +1,49 @@
+#header {
+   padding-top: 20px;
+
+   nav {
+      padding-left: 12px;
+      padding-right: 12px;
+   }
+
+   .contact-li {
+      margin-left: -80px;
+   }
+
+   a {
+      color: $title-color;
+      text-decoration: none;
+      font-size: 20px !important;
+      font-family: Montserrat;
+
+      .inactive {
+         color: #081220 !important;
+      }
+
+      .video-span {
+         position: relative;
+         left: -180px;
+         top: -5px;
+         color: #162745;
+         font-size: 40px;
+         z-index: -10;
+      }
+
+      .contact-span {
+         position: relative;
+         left: -120px;
+         top: -5px;
+         color: #162745;
+         font-size: 40px;
+         z-index: -10;
+      }
+   }
+}
+
+
+
+@media (max-width: 575px) {
+   .contact-li {
+      margin-left: 0px !important;
+   }
+}

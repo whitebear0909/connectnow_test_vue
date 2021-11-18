@@ -1,0 +1,67 @@
+.contactus {
+    .contact-box {
+        //width: 50%;
+        margin: auto;
+
+        .contact-title {
+            color: $text-color;
+            font-size: 25px;
+            font-family: Montserrat;
+        }
+
+        .contact-text {
+            color: $text-color;
+            font-size: 12px;
+            font-family: Mulish;
+        }
+
+        .contact-form-box {
+            background-color: $card-panel-bg-color;
+            padding: 20px;
+
+            .contact-form-title {
+                color: $text-color;
+                font-size: 18px;
+                font-family: Montserrat;
+            }
+
+            .form-row {
+                .form-item {
+                    label {
+                        color: $text-color;
+                        font-family: Montserrat;
+                        .form-star {
+                            color: #5f7fc4;
+                        }
+                    }
+
+                    input,
+                    textarea {
+                        background-color: $input-bg;
+                        border: none;
+                        border-radius: 0px;
+                        color: $text-color;
+                        font-family: Mulish;
+                    }
+
+                    button {
+                        background-color: $btn-accent-blue;
+                        color: $title-color;
+                        border: none;
+                        border-radius: 0px;
+                        font-family: Montserrat;
+
+                        &:hover {
+                            color: $text-color;
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+}

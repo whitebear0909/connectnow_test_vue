@@ -1,0 +1,189 @@
+.video-games {
+    .filter-box {
+        padding: 20px;
+        background-color: $card-panel-bg-color;
+
+        .filter-result-text {
+            color: $title-color;
+            font-family: Montserrat;
+            font-size: 20px;
+        }
+
+        .filter-item-input {
+            label {
+                color: $title-color;
+                font-family: Montserrat;
+                font-size: 14px;
+            }
+
+            input {
+                background-color: $input-bg;
+                color: $text-color;
+                font-family: Montserrat;
+                border: none;
+                border-radius: 0px;
+            }
+        }
+
+        .filter-item-select {
+            margin-top: 20px;
+
+            label {
+                color: $title-color;
+                font-family: Montserrat;
+                font-size: 14px;
+            }
+
+            .sort-direction {
+                border-radius: 0px;
+                background-color: $btn-accent-blue;
+                border: none;
+                color: $title-color;
+
+                &:hover {
+                    color: $text-color;
+                }
+            }
+
+            .sort-name {
+                border-radius: 0px;
+                background: $input-bg;
+                color: $text-color;
+                font-family: Montserrat;
+                border: none;
+            }
+
+        }
+
+        .filter-clear {
+            margin-top: 20px;
+
+            button {
+                border: none;
+                background: $btn-accent-blue;
+                color: $title-color;
+                font-family: Montserrat;
+                border-radius: 0px;
+
+                &:hover {
+                    color: $text-color;
+
+                }
+            }
+        }
+    }
+
+    .no-result{
+        color: $text-color;
+        font-size: 20px;
+        font-family: Montserrat;
+    }
+
+    .list-box {
+        padding: 0px 10px 0px 10px;
+        .img-black {
+            background: black;
+        }
+
+        .list-main {
+            padding: 20px 10px 20px 10px;
+            background-color: $card-panel-bg-color;
+
+            .list-title {
+                color: $title-color;
+                font-size: 20px;
+                font-family: Montserrat;
+            }
+
+            .list-date {
+                color: $text-color;
+                font-size: 16px;
+                font-family: Mulish;
+            }
+
+            .list-content {
+                color: $text-color;
+                font-family: Mulish;
+                font-size: 12px;
+            }
+        }
+
+        .list-score {
+            background: $card-panel-bg-color;
+
+            .score-mark {
+                background: $btn-accent-blue;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 20px;
+                color: $title-color;
+                font-family: Montserrat;
+            }
+        }
+    }
+}
+
+// /* Media Query for Mobile Devices */
+// @media (max-width: 480px) {
+
+// }
+
+// /* Media Query for low resolution  Tablets, Ipads */
+// @media (min-width: 481px) and (max-width: 1024px) {
+//     body {
+//         background-color: blue !important;
+//     }
+// }
+
+// /* Media Query for Laptops and Desktops */
+// @media (min-width: 1025px){
+//     body {
+//         background-color: green !important;
+//     }
+// }
+
+//clear-label
+@media (max-width: 575px) {
+    .clear-label {
+        display: none;
+    }
+
+    .list-box {
+        flex-direction: column-reverse;
+
+        .list-score {
+            background: black !important;
+            height: 100px;
+            display: block !important;
+            padding: 10px;
+
+            div {
+                justify-content: end !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .clear-label {
+        color: $card-panel-bg-color;
+    }
+
+    .clear-button {
+        padding-left: 0px !important;
+        padding-right: 0px  !important;;
+    }
+}
+
+@media (min-width: 769px) {
+    .clear-label {
+        display: none;
+    }
+
+    .clear-button {
+        width: auto !important;
+        float: right;
+    }
+}
