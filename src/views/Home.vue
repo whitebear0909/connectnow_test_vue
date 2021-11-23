@@ -10,8 +10,7 @@
               class="form-control"
               id="filterName"
               placeholder="Text String"
-              v-on:keyup.enter="handleFilter"
-              v-model="filterOption.searchName"
+              v-model="searchName"
             />
           </div>
           <div class="row justify-content-between">
@@ -21,8 +20,7 @@
                 class="form-control"
                 id="filterScore"
                 placeholder="1 - 10"
-                v-on:keyup.enter="handleFilter"
-                v-model="filterOption.score"
+                v-model="score"
               />
             </div>
             <div class="col-md-12 col-sm-5 col-xs-12 mt-3 filter-item-select">
@@ -160,12 +158,24 @@ export default {
       orderName: "first_release_date",
       orderDirection: "asc",
     },
+    searchName: "",
+    score: 0,
     options: [
       { name: "Release Date", id: "first_release_date" },
       { name: "Score", id: "rating" },
       { name: "Name", id: "name" },
     ],
   }),
+  watch: {
+    searchName(val) {
+      this.filterOption.searchName = val;
+      this.handleFilter();
+    },
+    score(val) {
+      this.filterOption.score = val;
+      this.handleFilter();
+    }
+  },
   computed: {
     ...mapGetters({
       filteredVideos: "filteredVideos",
@@ -196,6 +206,8 @@ export default {
         orderName: "first_release_date",
         orderDirection: "asc",
       };
+      this.searchName = "";
+      this.score = 0;
       this.handleFilter();
     },
   },
